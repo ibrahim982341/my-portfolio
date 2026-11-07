@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Muhammad Ibrahim | Web Developer and Deep Learning Researcher</title>
+  <meta name="description" content="Portfolio of Muhammad Usama: web development projects and DG-LiteNet, a lightweight deep learning model for colorectal cancer image classification.">
+
+  <!-- Font: Manrope from Google Fonts. If you are offline the page falls back to system fonts. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;800&display=swap" rel="stylesheet">
+
+  <!-- Applies the saved theme before the page paints, so there is no flash -->
+  <script>
+    try {
+      var savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "light" || savedTheme === "dark") {
+        document.documentElement.setAttribute("data-theme", savedTheme);
+      }
+    } catch (e) {}
+  </script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="nav" id="top">
+    <a class="logo" href="#top" aria-label="Muhammad Usama, back to top">
+      <span class="logo-mark"></span>
+      Muhammad Usama
+    </a>
+
+    <nav class="nav-links" id="navLinks" aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="round-btn theme-btn" id="themeBtn" aria-label="Switch to light theme" type="button">&#9728;</button>
+
+    <a class="btn btn-outline nav-cta" href="#contact">Contact me</a>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero-copy">
+      <p class="hero-intro">Hi, I'm Muhammad Usama</p>
+      <h1 class="hero-title">
+        <span class="line"><span class="line-inner">I build web apps</span></span>
+        <span class="line"><span class="line-inner red">and deep learning</span></span>
+        <span class="line"><span class="line-inner">models.</span></span>
+      </h1>
+      <p class="hero-text">
+        MS student, intern and full-stack developer in the making. My thesis project, DG-LiteNet,
+        is a lightweight deep learning model that classifies colorectal cancer images.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-red" href="#projects">See my work <span class="arrow" aria-hidden="true">&rarr;</span></a>
+        <a class="btn btn-outline" href="#contact">Contact me</a>
+        <!-- CHANGE ME: put your CV file in this folder and name it cv.pdf -->
+        <a class="btn btn-outline" href="cv.pdf" download="Muhammad-Usama-CV.pdf">Download CV</a>
+      </div>
+      </div>
+
+      <!-- CHANGE ME: put your photo in this folder and name it photo.jpg (square photos look best) -->
+      <div class="photo" id="photo">
+        <span class="photo-initials" aria-hidden="true">MU</span>
+        <img src="photo.jpg" alt="Portrait of Muhammad Usama" id="photoImg">
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE STRIP ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>HTML, CSS and JavaScript</span><i></i>
+        <span>Node.js and MongoDB</span><i></i>
+        <span>React and Tailwind CSS</span><i></i>
+        <span>CNNs and Vision Transformers</span><i></i>
+        <span>Medical image classification</span><i></i>
+        <span>HTML, CSS and JavaScript</span><i></i>
+        <span>Node.js and MongoDB</span><i></i>
+        <span>React and Tailwind CSS</span><i></i>
+        <span>CNNs and Vision Transformers</span><i></i>
+        <span>Medical image classification</span><i></i>
+      </div>
+    </div>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="about-grid">
+        <div>
+          <p class="section-label">About me</p>
+          <h2 class="section-title">A student who likes to build things that work.</h2>
+        </div>
+        <div class="about-body">
+          <p>
+            I'm an MS student and I currently work as an intern. Alongside my studies I'm growing
+            into a full-stack web developer: I've built a login-protected app with Node.js, Express
+            and MongoDB, and I enjoy designing clean interfaces with HTML, CSS, JavaScript and Tailwind.
+          </p>
+          <p>
+            My research is on lightweight deep learning for colorectal cancer image classification.
+            I compared CNN backbones, Vision Transformers and hybrid CNN-ViT models on four public
+            datasets, then built DG-LiteNet and tested it with an ablation study.
+          </p>
+
+          <div class="stats">
+            <div class="stat">
+              <strong data-count="4">4</strong>
+              <span>public datasets benchmarked</span>
+            </div>
+            <div class="stat">
+              <strong data-count="11">11</strong>
+              <span>model architectures compared</span>
+            </div>
+            <div class="stat">
+              <strong data-count="3">3</strong>
+              <span>random seeds per ablation run</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section" id="skills">
+      <p class="section-label">Skills</p>
+      <h2 class="section-title">What I work with</h2>
+
+      <div class="skills-grid">
+        <article class="skill-card">
+          <h3>Frontend</h3>
+          <p>Responsive pages and forms that look good on phones and laptops.</p>
+          <ul class="chips">
+            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>React</li><li>Tailwind CSS</li>
+          </ul>
+        </article>
+
+        <article class="skill-card">
+          <h3>Backend</h3>
+          <p>Servers, databases and secure login for real apps.</p>
+          <ul class="chips">
+            <li>Node.js</li><li>Express</li><li>MongoDB</li><li>JWT</li><li>bcrypt</li>
+          </ul>
+        </article>
+
+        <article class="skill-card">
+          <h3>Deep learning</h3>
+          <p>Training and comparing image classification models.</p>
+          <ul class="chips">
+            <li>CNNs</li><li>Vision Transformers</li><li>Hybrid CNN-ViT</li><li>Transfer learning</li>
+          </ul>
+        </article>
+
+        <article class="skill-card">
+          <h3>Research and writing</h3>
+          <p>Turning experiments into a thesis and journal-style paper.</p>
+          <ul class="chips">
+            <li>Ablation studies</li><li>Result tables</li><li>Architecture diagrams</li>
+          </ul>
+        </article>
+
+        <article class="skill-card">
+          <h3>Tools</h3>
+          <p>The tools I use every day to build and run my work.</p>
+          <ul class="chips">
+            <li>Git</li><li>VS Code</li><li>Kaggle</li><li>Google Colab</li>
+          </ul>
+        </article>
+
+        <article class="skill-card skill-card-red">
+          <h3>Currently learning</h3>
+          <p>Going deeper into full-stack development with the MERN stack and Git workflows.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS (slider) ============ -->
+    <section class="section" id="projects">
+      <p class="section-label">Projects</p>
+      <h2 class="section-title">Research and web projects</h2>
+
+      <div class="slider" id="slider">
+        <div class="slider-window">
+          <div class="slider-track" id="sliderTrack">
+
+            <!-- Slide 1: DG-LiteNet -->
+            <article class="slide" aria-label="Project 1 of 4">
+              <div class="slide-body">
+                <span class="tag">Research</span>
+                <h3>DG-LiteNet</h3>
+                <p>
+                  A lightweight deep learning model for colorectal cancer image classification and
+                  the subject of my MS thesis. It is tested on endoscopy and histopathology images
+                  from Hyper-Kvasir, Nerthus, LC25000 and EBHI-Seg.
+                </p>
+                <ul class="chips">
+                  <li>Deep learning</li><li>Vision Transformers</li><li>Medical imaging</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Slide 2: Benchmark -->
+            <article class="slide" aria-label="Project 2 of 4">
+              <div class="slide-body">
+                <span class="tag">Research</span>
+                <h3>CNN, ViT and hybrid benchmark</h3>
+                <p>
+                  A side-by-side comparison of five CNN backbones (ResNet50, EfficientNetB0,
+                  DenseNet121, InceptionV3, Xception), a standalone Vision Transformer and five
+                  hybrid CNN-ViT models, with test-time augmentation. Everything ran on Kaggle
+                  and Google Colab.
+                </p>
+                <ul class="chips">
+                  <li>Transfer learning</li><li>Kaggle</li><li>Google Colab</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Slide 3: MERN app -->
+            <article class="slide" aria-label="Project 3 of 4">
+              <div class="slide-body">
+                <span class="tag">Web</span>
+                <h3>Login-protected user dashboard</h3>
+                <p>
+                  A full-stack app with registration, login and a personal dashboard. Passwords are
+                  hashed with bcrypt, sessions use JWT cookies, and protected routes check the token
+                  before showing data. Each user gets their own to-do list.
+                </p>
+                <ul class="chips">
+                  <li>Node.js</li><li>Express</li><li>MongoDB</li><li>Tailwind CSS</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Slide 4: Registration form -->
+            <article class="slide" aria-label="Project 4 of 4">
+              <div class="slide-body">
+                <span class="tag">Web</span>
+                <h3>University admissions form</h3>
+                <p>
+                  A ten-field registration form with a navy and gold design, a two-panel card layout
+                  and CNIC validation with a regular expression, built with React and Tailwind.
+                </p>
+                <ul class="chips">
+                  <li>React</li><li>Tailwind CSS</li><li>Form validation</li>
+                </ul>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <div class="slider-controls">
+          <button class="round-btn" id="prevBtn" aria-label="Previous project">&larr;</button>
+          <span class="slider-count" id="sliderCount" aria-live="polite">1 / 4</span>
+          <button class="round-btn" id="nextBtn" aria-label="Next project">&rarr;</button>
+        </div>
+      </div>
+
+      <!-- CHANGE ME: put your real GitHub profile link here -->
+      <a class="btn btn-outline more-btn" href="https://github.com/your-username" target="_blank" rel="noopener">
+        More on GitHub <span class="arrow" aria-hidden="true">&rarr;</span>
+      </a>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact">
+      <div class="contact-grid">
+        <div>
+          <p class="section-label">Contact</p>
+          <h2 class="section-title">Have a project or an opportunity? Send me a message.</h2>
+          <ul class="contact-list">
+            <!-- CHANGE ME: your email, LinkedIn and GitHub -->
+            <li><span>Email</span><a href="mailto:your.email@example.com">your.email@example.com</a></li>
+            <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/your-name" target="_blank" rel="noopener">linkedin.com/in/your-name</a></li>
+            <li><span>GitHub</span><a href="https://github.com/your-username" target="_blank" rel="noopener">github.com/your-username</a></li>
+          </ul>
+        </div>
+
+        <!-- Messages are sent through Formspree. Add your form ID in script.js (FORMSPREE_ID) -->
+        <form class="form" id="contactForm" novalidate>
+          <label for="fName">Your name</label>
+          <input id="fName" name="name" type="text" required autocomplete="name" placeholder="Your name">
+
+          <label for="fEmail">Your email</label>
+          <input id="fEmail" name="email" type="email" required autocomplete="email" placeholder="you@example.com">
+
+          <label for="fMessage">Message</label>
+          <textarea id="fMessage" name="message" rows="5" required placeholder="Tell me about your project"></textarea>
+
+          <p class="form-note" id="formNote" role="status"></p>
+          <button class="btn btn-red" id="sendBtn" type="submit">Send message <span class="arrow" aria-hidden="true">&rarr;</span></button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <span>&copy; 2026 Muhammad Usama</span>
+    <a href="#top">Back to top</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
